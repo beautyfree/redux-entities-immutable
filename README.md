@@ -1,14 +1,14 @@
-# Redux Entities
+# Redux Entities Immutable
 
-[![build status](https://img.shields.io/travis/itsmepetrov/redux-entities/master.svg?style=flat-square)](https://travis-ci.org/itsmepetrov/redux-entities)
-[![npm version](https://img.shields.io/npm/v/redux-entities.svg?style=flat-square)](https://www.npmjs.com/package/redux-entities)
+[![build status](https://img.shields.io/travis/beautyfree/redux-entities-immutable/master.svg?style=flat-square)](https://travis-ci.org/beautyfree/redux-entities-immutable)
+[![npm version](https://img.shields.io/npm/v/redux-entities-immutable.svg?style=flat-square)](https://www.npmjs.com/package/redux-entities-immutable)
 
 Higher-order reducer for store entities received from gaearon's [normalizr](https://github.com/gaearon/normalizr) and makes it easy to handle them.
 
 ### Installation
 
 ```
-npm install --save redux-entities
+npm install --save redux-entities-immutable
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ WIP
 ### Use with `entitiesReducer`
 ```js
 import { combineReducers } from 'redux';
-import { entitiesReducer } from 'redux-entities';
+import { entitiesReducer } from 'redux-entities-immutable';
 import omit from 'lodash/object/omit';
 
 function contacts(state = {}, action) {
@@ -58,7 +58,7 @@ export default combineReducers({
 
 ### Use with `combineEntitiesReducers`
 ```js
-import { combineEntitiesReducers } from 'redux-entities';
+import { combineEntitiesReducers } from 'redux-entities-immutable';
 import { contacts, groups, images, notes } from './entities'
 
 export default combineEntitiesReducers({
