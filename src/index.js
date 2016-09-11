@@ -1,8 +1,9 @@
-import { isFunction, mapValues } from 'lodash';
+import { isFunction, mapValues, get } from 'lodash';
 
 function selectEntities(action, name) {
-  if (action.payload && action.payload.entities && action.payload.entities[name]) {
-    return action.payload.entities[name];
+  const entities = get(action, `payload.entities.${name}`)
+  if (entities) {
+    return entities;
   }
   return null;
 }
@@ -22,7 +23,8 @@ export function entitiesReducer(reducer, entitiesName) {
 
 export function combineEntitiesReducers(reducers) {
   const entitiesReducers = mapValues(reducers, entitiesReducer);
-  return (state = {}, action) => mapValues(entitiesReducers,
+  return (state = {}, action) => mapValues(
+    entitiesReducers,
     (reducer, key) => reducer(state[key], action)
   );
 }

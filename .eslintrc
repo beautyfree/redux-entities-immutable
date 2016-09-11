@@ -1,18 +1,4 @@
 {
-  "extends": "airbnb",
   "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],
-  "env": {
-    "mocha": true,
-    "node": true
-  },
-  "globals": {
-    "expect": true
-  },
-  "rules": {
-    "comma-dangle": 0,
-    "max-len": 0
-  }
+  "extends": "eslint:recommended"
 }

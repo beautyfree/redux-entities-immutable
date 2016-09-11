@@ -1,10 +1,10 @@
 {
   "name": "redux-entities-immutable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Higher-order reducer for immutable store entities received from gaearon's normalizr and makes it easy to handle them.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint ./src/*.js",
+    "eslint": "eslint ./src/*.js",
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib",
     "prepublish": "npm run clean && npm run test && npm run build"
@@ -35,13 +35,13 @@
   },
   "homepage": "https://github.com/beautyfree/redux-entities-immutable#readme",
   "devDependencies": {
-    "babel-cli": "^6.11.4",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
-    "babel-preset-es2015": "^6.13.2",
-    "eslint": "^3.2.2",
-    "eslint-config-airbnb": "^10.0.0",
-    "eslint-plugin-import": "^1.12.0",
-    "eslint-plugin-react": "^6.0.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-1": "^6.13.0",
+    "babel-register": "^6.14.0",
+    "eslint": "^3.4.0",
     "rimraf": "^2.4.3"
   },
   "dependencies": {
